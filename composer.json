@@ -1,0 +1,30 @@
+{
+    "name": "utopia-php/logger",
+    "description": "Utopia Logger library is simple and lite library for logging information, such as errors or warnings. This library is aiming to be as simple and easy to learn and use.",
+    "type": "library",
+    "keywords": ["php","framework", "upf", "utopia", "logger", "logging", "errors", "warnings", "logs", "sentry", "raygun", "appsignal"],
+    "license": "MIT",
+    "scripts": {
+        "check": "./vendor/bin/phpstan analyse --level max src tests",
+        "lint": "./vendor/bin/pint --test",
+        "format": "./vendor/bin/pint"
+    },
+    "autoload": {
+        "psr-4": {"Utopia\\Logger\\": "src/Logger"}
+    },
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "4.0.1",
+        "laravel/pint": "1.2.*",
+        "phpstan/phpstan": "1.9.x-dev",
+        "phpunit/phpunit": "9.6.x-dev"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Utopia\\Tests\\": "tests/Adapter"
+        }
+    },
+    "minimum-stability": "dev"
+}
